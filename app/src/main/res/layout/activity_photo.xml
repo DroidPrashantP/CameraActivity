@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="paddy.com.cameraapplication.PhotoActivity">
+    <RelativeLayout
+        android:id="@+id/camera_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/save_to_gallary">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/capture_img"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+        </RelativeLayout>
+
+           <Button
+               android:id="@+id/save_to_gallary"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_centerHorizontal="true"
+               android:text="Save to gallary"
+               android:padding="7dp"/>
+
+</RelativeLayout>
